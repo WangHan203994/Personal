@@ -1,0 +1,48 @@
+{
+  "name": "responsivelazyloader",
+  "version": "0.1.7",
+  "dependencies": {
+    "jquery": ">=1.3"
+  },
+  "optionalDependencies": {
+    "modernizr": ""
+  },
+  "title": "jQuery Responsive Lazy Loader",
+  "description": "Allow you to load image renditions according to the current mediaqueries and/or CSS display such as a grid system. For example, it allows you to load large images on retina display and small ones on other devices. It can be used with a flickr account as well as with CMS renditions and a grid system as bootstrap or some custom HTML structure.",
+  "keywords": [
+    "jquery",
+    "responsive",
+    "lazyloading",
+    "lazyloader",
+    "lazyload",
+    "mediaquery",
+    "mediaqueries"
+  ],
+  "homepage": "http://jetmartin.github.io/responsive-lazy-loader",
+  "author": {
+    "name": "J-Et. Martin",
+    "url": "http://www.jet-martin.com"
+  },
+  "maintainers": [
+    {
+      "name": "Valtech",
+      "url": "http://www.valtech.fr"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jetmartin/responsive-lazy-loader.git"
+  },
+  "demo": "http://jetmartin.github.io/responsive-lazy-loader/demo.html",
+  "bugs": "https://github.com/jetmartin/responsive-lazy-loader/issues",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    },
+    {
+      "type": "GPLv2",
+      "url": "http://www.example.com/licenses/gpl.html"
+    }
+  ]
+}

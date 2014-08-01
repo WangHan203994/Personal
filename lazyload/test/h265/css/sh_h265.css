@@ -1,0 +1,56 @@
+/* cssreset_wzx */ 
+.l{float:left;_display:inline}
+.r{float:right;_display:inline}
+.z{zoom:1}
+.o{overflow:hidden;zoom:1}
+.inline{_display:inline}
+.dk{display:block}
+.dik{display:inline-block}
+.normal{font-weight:normal}
+.c-black a:hover{color:#d80c18;text-decoration:underline}
+.fix{*zoom:1}
+.fix:after{display:block;content:"clear";height:0;clear:both;overflow:hidden;visibility:hidden}
+.hd_top{ height: 390px}
+#playerContainer ,#setUpContainer{ display: none }
+.hd_ul{ display : none }
+.hd_menu{text-align:  center ;}
+.hd_menu li{display: inline-block;width: 150px;}
+
+
+/* css_h265 980 */
+.w980 .con{width:980px;margin:0 auto}
+/*.w980 .hd_top{height:933px}*/
+.w980 .hd_player{width:980px;height:515px}
+.w980 .hd_box{width:850px}
+.hd_list{margin: 5%}
+
+/* css_h265 1190 */
+.w1190 .con{width:1190px;margin:0 auto}
+/*.w1190 .hd_top{height:1036px}*/
+.w1190 .hd_player{width:1190px;height:618px}
+.w1190 .hd_box{width:1060px}
+.w1190 .hd_list{margin-left:8px;}
+.w1190 .hd_ul{margin-left:-8px}
+
+/* css_h265 1380 */
+.w1380 .con{width:1380px;margin:0 auto}
+/*.w1380 .hd_top{height:1129px}*/
+.w1380 .hd_player{width:1380px;height:711px}
+.w1380 .hd_box{width:1250px}
+.w1380 .hd_list{margin-left:10px}
+.w1380 .hd_ul{margin-left:-10px}
+
+/* css_h265 */
+.bgfc{background:#fcfcfc}
+.ptb8{padding:8px 0 2px}
+.bg_h265{background:url(http://css.tv.itc.cn/special/h265/image/bg_h265.jpg) no-repeat 50% 0}
+.hd_player{left:0;bottom:0;background:#000}
+.h100{height:100%}
+.hd_banner{background:url(http://css.tv.itc.cn/special/h265/image/bg_banner.jpg) repeat-x}
+.w120{width:120px}
+.bde{border:1px solid #e2e2e2}
+.hd_type{display:block;height:40px;border-bottom:1px solid #f4f4f4;background:#fff;color:#000;font-weight:bold;line-height:40px;text-align:center}
+.hd_type:hover,.hd_type_on{background:#f4f4f4;color:#e73d3a;text-decoration:none}
+.hd_list{width:160px;height:266px;margin-bottom:5px;padding:10px 0 0 10px;background:url(http://css.tv.itc.cn/special/h265/image/bg_li.png) no-repeat}
+.hd_list .f-yahei{display:inline-block;overflow:hidden;width:154px;height:18px;line-height:18px;zoom:1}
+.hd_label{position:absolute;top:14px;right:14px;width:32px;height:32px;background:url(http://css.tv.itc.cn/special/h265/image/icon_db.png) no-repeat;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://css.tv.itc.cn/special/h265/image/icon_db.png')}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <input type="button" id="testBtn" value="测试"/>
+</body>
+<script type="text/javascript" src="loader.js"></script>
+<script type="text/javascript">
+    window.loadSource('test.css');
+    window.loadSource('test.js');
+    if(!window.name){
+        window.name = 1;
+    }else{
+        ++window.name;
+    }
+    alert(window.name);
+</script>
+</html>
