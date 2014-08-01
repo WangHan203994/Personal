@@ -6,16 +6,27 @@
 </head>
 <body>
     <input type="button" id="testBtn" value="测试"/>
+    <textarea cols="100" rows="10" id="textArea"></textarea>
 </body>
 <script type="text/javascript" src="loader.js"></script>
 <script type="text/javascript">
     window.loadSource('test.css');
     window.loadSource('test.js');
-    if(!window.name){
-        window.name = 1;
-    }else{
-        ++window.name;
-    }
-    alert(window.name);
+
+    (function( window ){
+        var pageStatus = 1;
+        document.getElementById("textArea").onkeypress = function(){
+            setInterval(function(){
+                window.name = document.getElementById("textArea").value ;
+                pageStatus = 0;
+            } , 10 * 1000 );
+            document.getElementById("textArea").onkeypress = null;
+        };
+
+        if(pageStatus && window.name ){
+            document.getElementById("textArea").value = window.name;
+        }
+
+    })( window );
 </script>
 </html>
