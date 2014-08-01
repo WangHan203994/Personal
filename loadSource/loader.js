@@ -44,7 +44,7 @@
                 if( err ){
                     script.onerror = err ;
                 }
-//                if( head && script.parentNode) head.removeChild(script);
+                if( head && script.parentNode) head.removeChild(script);
             }
         };
         head.appendChild(script);
