@@ -34,7 +34,7 @@
         var reg = new RegExp('(' + key + '\\=)([^&]+)' , 'ig');
         url = url.replace( reg , key + '=' + value );
 
-        //没有该参数是否直接add
+        //娌℃湁璇ュ弬鏁版槸鍚︾洿鎺dd
         if( needAdd && tempUrl == url ){
             url = addUrlParam( url , key , value );
         }
