@@ -1,8 +1,9 @@
  /**
  * Created by hanwang203994 on 2014/8/10.
+  * 更详细的检测参考 js高程 p242
  */
 (function( global ){
-    var ua = navigator.userAgent.toLowerCase().replace(/"/ig,'');
+    var ua = navigator.userAgent.toLowerCase();
     var client = {
         browser: {
             'isIE' : null,
@@ -46,7 +47,7 @@
         }else if(/rv:([^\)]+)\)\sgecko\/\d{8}/.test(ua)){
             client.browser.ver = RegExp["$1"];
             client.browser.gecko = parseFloat(client.browser.ver);
-        }else if(/rv:([^\)]+)\)/.test(ua)||/msie\s([^;]+)/.test(ua)){
+        }else if(/rv:([^\)]+)\)/.test(ua)||/msie\s([^\\"]+|[^;]+)/.test(ua)){
             //win7 的ie11.0.10 ua是Mozilla/5.0 ("MSIE 10.0"; Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; rv:11.0) like Gecko
             //win8的ie11 ua Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko
             //ie这里好麻烦...http://msdn.microsoft.com/zh-cn/library/ie/hh869301(v=vs.85).aspx#ie11
