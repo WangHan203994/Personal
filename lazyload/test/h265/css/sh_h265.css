@@ -12,7 +12,7 @@
 .fix:after{display:block;content:"clear";height:0;clear:both;overflow:hidden;visibility:hidden}
 .hd_top{ height: 390px}
 #playerContainer ,#setUpContainer{ display: none }
-.hd_ul{ display : none }
+.hd_ul{ display : none ; height: 300px ; overflow: scroll;}
 .hd_menu{text-align:  center ;}
 .hd_menu li{display: inline-block;width: 150px;}
 

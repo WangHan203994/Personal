@@ -277,7 +277,9 @@
         });
 //        (new sohuHD.ImageLoader( { attr : "lazy-src" , bindEvents: [ "resize" , "scroll" , "click" ] , initInvisibleImg : false })).init();
 
-        $('img[lazy-src]').lazyLoadImgs( { attr : 'lazy-src' , initInvisibleImg : true } );
+        $('img[lazy-src]').lazyLoadImgs( { attr : 'lazy-src' , initInvisibleImg : true , bindEvents: [ "resize" , "scroll" , "click" ] } );
+//        $('ul.hd_ul:eq(0)').lazyLoadImgs( { attr : 'lazy-src' , initInvisibleImg : true , bindEvents: [ "resize" , "scroll" , "click" ]  } );
+//        $('ul.hd_ul:eq(1)').lazyLoadImgs( { attr : 'lazy-src' , initInvisibleImg : true , bindEvents: [ "resize" , "scroll" , "click" ]  } );
 
 </script>
 </body>

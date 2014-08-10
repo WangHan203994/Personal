@@ -67,7 +67,7 @@
                         tp.loadImg();
                     }, tp.timeout);
                 }
-            }
+            };
 
             $.each( tp.bindEvents , function(index ,item ){
                 tp.container.bind( item , eventHandler );
@@ -110,16 +110,15 @@
 //            }
 //            console.log(tp.imagesObj);
         },
-        windowView : function(image){
+        windowView : function( image ){
         // window variables
-        var container = this.container;
-        var containerHeight = container.height(),
-            containerWidth		 = container.width(),
+        var winHeight = win.height(),
+            winWidth		 = win.width(),
 
-            containerTop		 = container.scrollTop(),
-            containerBottom 	 = containerTop + containerHeight,
-            containerLeft	 	 = container.scrollLeft(),
-            containerRight		 = containerLeft + containerWidth,
+            winTop		 = win.scrollTop(),
+            winBottom 	 = winTop + winHeight,
+            winLeft	 	 = win.scrollLeft(),
+            winRight		 = winLeft + winWidth,
 
             imageHeight		 = image.height(),
             imageWidth	 	 = image.width(),
@@ -129,8 +128,8 @@
             imageLeft		 = image.offset().left,
             imageRight	 	 = imageLeft + imageWidth;
 
-        return (((containerBottom >= imageTop) && (containerTop <= imageTop)) || ((containerBottom >= imageBottom) && (containerTop <= imageBottom))) &&
-            (((containerRight >= imageLeft) && (containerLeft <= imageLeft)) || ((containerRight >= imageRight) && (containerLeft <= imageRight)));
+        return (((winBottom >= imageTop) && (winTop <= imageTop)) || ((winBottom >= imageBottom) && (winTop <= imageBottom))) &&
+            (((winRight >= imageLeft) && (winLeft <= imageLeft)) || ((winRight >= imageRight) && (winLeft <= imageRight)));
         }
     });
     sohuHD.ImageLoader = ImageLoader;
@@ -140,8 +139,12 @@
             var tempImgsArray =  this ;
             if( tempImgsArray.get(0) && tempImgsArray.first().is('img') ){
                 options.imgArray = tempImgsArray;
-                new ImageLoader( options ).init();
+            }else{
+                options.imgArray = $(this).find('img');
+                options.container = $(this);
             }
+
+            new ImageLoader( options ).init();
             return this;
 
         }
