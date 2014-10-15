@@ -12,6 +12,8 @@
             'isIE7' : /msie 7/.test(ua),
             'isIE8' : /msie 8/.test(ua),
             'isIE9' : /msie 9/.test(ua),
+            'isIE10' : /msie 10/.test(ua),
+            'isIE11' : /msie 11/.test(ua),
             'isOpera' : /(opera)(?:.*version)?[ \/]([\w.]+)/.test(ua),
             'isMoz' : /gecko\/([\d.]*)/.test(ua),
             'isFirefox' : /firefox\/([\d.]*)/.test(ua),
@@ -58,6 +60,8 @@
             if (Object.hasOwnProperty.call(window, "ActiveXObject") && !window.ActiveXObject) {
                 // is IE11
                 client.browser.isLowIE = false;
+                client.browser.isIE10 = false;
+                client.browser.isIE11 = true;
             }
         }
 
