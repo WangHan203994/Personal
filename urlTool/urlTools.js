@@ -87,10 +87,22 @@
         return url.replace( /(&)+/g , '&' ).replace( /(&)+$/g , '').replace( /\?(&)+/g , '?');
     };
 
+    function parseURL(url){
+        var parse_url = /^(?:([A-Za-z]+):(\/{0,3}))?([0-9.\-A-Za-z]+\.[0-9A-Za-z]+)?(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/;
+        var names = ['url', 'scheme', 'slash', 'host', 'port', 'path', 'query', 'hash'];
+        var results = parse_url.exec(url);
+        var that = {};
+        for (var i = 0, len = names.length; i < len; i += 1) {
+            that[names[i]] = results[i] || '';
+        }
+        return that;
+    }
+
     global.addUrlParam = addUrlParam;
     global.updateUrlParam = updateUrlParam;
     global.getUrlParam = getUrlParam;
     global.delUrlParam = delUrlParam;
+    global.parseURL = parseURL;
 
 } )( global );
 
@@ -114,3 +126,7 @@ console.log( global.getUrlParam('http://www.baidu.com/?test=update&test=update&t
 console.log( global.delUrlParam('http://www.baidu.com/?test=update&test=update&test1=t2&add=add' , 'test1' ) );
 console.log( global.delUrlParam('http://www.baidu.com/?test=update&test=update&test1=t2&add=add' , 'add' ) );
 console.log( global.delUrlParam('http://www.baidu.com/?test=update&test=update&test1=t2&add=add' , 'test' ) );
+
+
+//parseUrl
+console.log(global.parseURL('http://tv.sohu.com/a/b/c.do?aaa=bbb&ccc=ddd'));
