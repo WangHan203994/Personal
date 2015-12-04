@@ -1,0 +1,139 @@
+@import "./mgs/table";
+@import "./mgs/button";
+@import "./mgs/search";
+@import "./mgs/pager";
+@import "./mgs/overlay";
+*{
+  margin:0;
+  padding:0;
+  border-box:box-sizing;
+}
+ul,li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+body{
+  background: #eee;
+}
+side{
+  float: left;
+  background:#2d3e50;
+  position: fixed;
+  top:0;
+  bottom: 0;
+  width:299px;
+  border-right:1px solid #0f2438;
+  color:#fff;
+  .logo{
+    font-size:24px;
+    color:#95a0aa;
+    padding-left:35px;
+    height:75px;
+    line-height: 75px;
+    border-bottom: 1px solid #2f4255;
+    background:url("http://s17.mogucdn.com/p1/151123/upload_ifrgiyzzmmywcojqguzdambqmeyde_448x115.jpg") no-repeat 0 0;
+    background-size:100% 100%;
+  }
+  >ul{
+    >li {
+      display: block;
+      padding-left: 30px;
+      h4 {
+        font-size: 14px;
+        color: #98a2ad;
+        line-height: 32px;
+        display: block;
+        height:32px;
+      }
+      > ul {
+        display: none;
+        padding-left: 20px;
+        li {
+          font-size: 12px;
+          color: #fff;
+          a {
+            display: block;
+            line-height: 32px;
+            height:32px;
+            text-indent: 20px;
+            color:#fff;
+          }
+        }
+        li:hover,li.action{
+          a {
+            background: #5faee3;
+          }
+        }
+      }
+    }
+    >li.action{
+      background: #34495e;
+      border-left: #5faee3 5px solid;
+      margin-bottom: 10px;
+      >ul{
+        display: block;
+      }
+    }
+  }
+}
+main{
+  padding-left: 299px;
+  .wrapper{
+    padding: 10px;
+    border-left: 1px solid #707f8d;
+  }
+}
+.nav{
+  padding: 0 25px;
+  background: #fff;
+  border-bottom: 1px solid #b8bec4;
+  line-height: 75px;
+  .member{
+    color:#5faee3;
+    font-size: 18px;
+    .logout{
+      color:#a1aab4;
+    }
+  }
+}
+.pull-left{
+  float: left;
+}
+.pull-right{
+  float: right;
+}
+.clearfix{
+  zoom:1;
+}
+.clearfix:after{
+  display: block;
+  content:" ";
+  clear: both;
+  height:0;
+  overflow: hidden;
+}
+input[type=text]{
+  border:1px solid #c9cfd4;
+  line-height: 24px;
+  height:24px;
+  outline: none;
+  color:#777;
+  text-indent: 5px;
+}
+.col-row{
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height:24px;
+  height:24px;
+  label{
+    vertical-align: bottom;
+    float: left;
+    width:120px;
+    text-indent: 10px;
+  }
+  .col-row-content{
+    padding-left: 50px;
+  }
+}
